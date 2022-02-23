@@ -1,5 +1,6 @@
 package com.ilegra.desafio.entities;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Customer implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private Integer id;

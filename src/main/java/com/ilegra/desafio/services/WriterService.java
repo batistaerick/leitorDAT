@@ -4,16 +4,15 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.ilegra.desafio.entities.DAT;
 import com.ilegra.desafio.entities.Item;
 import com.ilegra.desafio.entities.Sale;
 import com.ilegra.desafio.entities.Salesman;
 
-public class Writer {
+public class WriterService {
 
-    private Writer() {
+    private WriterService() {
         throw new IllegalStateException("Utility class");
     }
 
@@ -38,16 +37,15 @@ public class Writer {
     }
 
     private static Integer mostExpensiveSale(List<Sale> sales) {
-        List<List<Item>> listItems = sales.stream().map(Sale::getItems).collect(Collectors.toList());
+        List<List<Item>> listItems = sales.stream().map(Sale::getItems).toList();
 
-        listItems.stream().forEach(x -> {
+        listItems.forEach(x -> {
             idExpensive = 0;
             priceExpensive = 0d;
-            x.stream().forEach(y -> {
-                if ((y.getPrice() * y.getQuantity()) > priceExpensive) {
-                    priceExpensive = y.getPrice() * y.getQuantity();
-                    idExpensive = y.getId();
-                }
+
+            x.stream().filter(y -> y.getPrice() * y.getQuantity() > priceExpensive).forEach(y -> {
+                priceExpensive = y.getPrice() * y.getQuantity();
+                idExpensive = y.getId();
             });
         });
         return idExpensive;
@@ -61,11 +59,9 @@ public class Writer {
 
         totalSales = salesmans.stream().mapToDouble(Salesman::getTotalSales).sum();
 
-        salesmans.stream().forEach(x -> {
-            if (x.getTotalSales() < totalSales) {
-                totalSales = x.getTotalSales();
-                worst = x.getName();
-            }
+        salesmans.stream().filter(x -> x.getTotalSales() < totalSales).forEach(x -> {
+            totalSales = x.getTotalSales();
+            worst = x.getName();
         });
         return worst;
     }

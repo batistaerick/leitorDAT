@@ -1,9 +1,11 @@
 package com.ilegra.desafio;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.List;
 
-import com.ilegra.desafio.services.Reader;
-import com.ilegra.desafio.services.Writer;
+import com.ilegra.desafio.services.ReaderService;
+import com.ilegra.desafio.services.WriterService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,8 +24,10 @@ public class DesafioApplication {
 	public void write() {
 		File[] files = new File(System.getProperty("user.home") + "\\data\\in").listFiles();
 
-		for (int i = 0; i < files.length; i++) {
-			Writer.writeFile(files[i], Reader.readFiles(files[i]));
+		if (files != null) {
+			for (File file : files) {
+				WriterService.writeFile(file, ReaderService.readFiles(file));
+			}
 		}
 	}
 }
