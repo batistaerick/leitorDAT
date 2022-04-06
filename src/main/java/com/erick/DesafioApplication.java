@@ -1,9 +1,9 @@
-package com.erick.desafio;
+package com.erick;
 
 import java.io.File;
 
-import com.erick.desafio.services.ReaderService;
-import com.erick.desafio.services.WriterService;
+import com.erick.services.ReaderService;
+import com.erick.services.WriterService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

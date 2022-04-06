@@ -1,7 +1,8 @@
-package com.erick.desafio.services;
+package com.erick.services;
 
 import com.erick.desafio.entities.*;
-import com.erick.desafio.exceptions.ReaderException;
+import com.erick.exceptions.ReaderException;
+import com.erick.entities.*;
 
 import java.io.BufferedReader;
 import java.io.File;

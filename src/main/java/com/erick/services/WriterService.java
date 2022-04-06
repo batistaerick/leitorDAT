@@ -1,14 +1,14 @@
-package com.erick.desafio.services;
+package com.erick.services;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.List;
 
-import com.erick.desafio.entities.DAT;
-import com.erick.desafio.entities.Item;
-import com.erick.desafio.entities.Sale;
-import com.erick.desafio.entities.Salesman;
+import com.erick.entities.DAT;
+import com.erick.entities.Item;
+import com.erick.entities.Sale;
+import com.erick.entities.Salesman;
 
 public class WriterService {
 
