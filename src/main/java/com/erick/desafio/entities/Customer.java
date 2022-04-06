@@ -1,4 +1,4 @@
-package com.ilegra.desafio.entities;
+package com.erick.desafio.entities;
 
 import java.io.Serial;
 import java.io.Serializable;

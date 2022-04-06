@@ -1,4 +1,4 @@
-package com.ilegra.desafio.entities;
+package com.erick.desafio.entities;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -11,12 +11,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DAT implements Serializable {
+public class Sale implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
 
-    private List<Customer> clients;
-    private List<Sale> sales;
-    private List<Salesman> salesmans;
+    private Integer id;
+    private Integer salesId;
+    private List<Item> items;
+    private String salesManName;
 }

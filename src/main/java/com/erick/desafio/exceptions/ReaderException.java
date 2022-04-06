@@ -1,6 +1,4 @@
-package com.ilegra.desafio.exceptions;
-
-import java.io.IOException;
+package com.erick.desafio.exceptions;
 
 public class ReaderException extends RuntimeException {
     public ReaderException(String msg) {

@@ -1,11 +1,9 @@
-package com.ilegra.desafio;
+package com.erick.desafio;
 
 import java.io.File;
-import java.util.Arrays;
-import java.util.List;
 
-import com.ilegra.desafio.services.ReaderService;
-import com.ilegra.desafio.services.WriterService;
+import com.erick.desafio.services.ReaderService;
+import com.erick.desafio.services.WriterService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

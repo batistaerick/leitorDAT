@@ -1,7 +1,7 @@
-package com.ilegra.desafio.services;
+package com.erick.desafio.services;
 
-import com.ilegra.desafio.entities.*;
-import com.ilegra.desafio.exceptions.ReaderException;
+import com.erick.desafio.entities.*;
+import com.erick.desafio.exceptions.ReaderException;
 
 import java.io.BufferedReader;
 import java.io.File;

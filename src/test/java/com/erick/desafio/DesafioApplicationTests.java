@@ -1,4 +1,4 @@
-package com.ilegra.desafio;
+package com.erick.desafio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
